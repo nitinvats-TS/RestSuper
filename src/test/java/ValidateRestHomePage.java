@@ -19,7 +19,8 @@ public class ValidateRestHomePage extends BaseClass{
     @DataProvider(name="HomePage")
     public Object[][] getData() {
 
-        ExcelReader excel = new ExcelReader("C:\\Automation\\demoForRest.com.au\\src\\main\\resources\\TestData\\ObjectRepository.xlsx");
+        //ExcelReader excel = new ExcelReader("C:\\Automation\\demoForRest.com.au\\src\\main\\resources\\TestData\\ObjectRepository.xlsx");
+        ExcelReader excel = new ExcelReader(".\\src\\main\\resources\\TestData\\ObjectRepository.xlsx");
         String sheetName = "HomePageObj";
 
         int rowNum = excel.getRowCount(sheetName);
@@ -93,12 +94,12 @@ public class ValidateRestHomePage extends BaseClass{
         // We have set it to 800 x 600 to accommodate various screens. Feel free to
         // change it.
         //eyes.open(driver, "Rest", "Smoke Test", new RectangleSize(800, 800));
-        eyes.open(driver, "Rest", "Homepage Test");
+        eyes.open(driver, "Rest", "Homepage");
 
         // Navigate the browser to the "ACME" demo app.
         //driver.get("https://demo.applitools.com");
-        //driver.get("https://www.rest.com.au");
         driver.get("https://rest.com.au/super/super-products");
+        driver.get("https://www.rest.com.au");
         driver.manage().window().maximize();
 
         // To see visual bugs after the first run, use the commented line below instead.

@@ -59,7 +59,8 @@ public class BaseClass {
 
     @BeforeTest
     public void openBrowser(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\demoForRest.com.au\\src\\main\\resources\\Driver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Automation\\demoForRest.com.au\\src\\main\\resources\\Driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\Driver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
